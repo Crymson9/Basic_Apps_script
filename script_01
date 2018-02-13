@@ -1,0 +1,22 @@
+wget https://github.com/Automattic/simplenote-electron/releases/download/v1.0.8/simplenote-1.0.8.deb
+sudo dpkg -i simplenote-1.0.8.deb
+  
+wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera.list' 
+sudo apt-get update 
+sudo apt-get install opera
+  
+sudo apt install apt-transport-https
+curl https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add -
+echo "deb https://repo.skype.com/deb stable main" | sudo tee /etc/apt/sources.list.d/skypeforlinux.list
+sudo apt update
+sudo apt install skypeforlinux
+  
+https://zoom.us/download
+sudo dpkg -i zoom
+sudo apt-get -f install
+ dpkg -l |grep zoom
+  
+sudo apt-get install gdebi-core
+wget http://repo.steampowered.com/steam/pool/steam/s/steam/steam-launcher_1.0.0.48_all.deb
+sudo gdebi steam-launcher_1.0.0.48_all.deb
